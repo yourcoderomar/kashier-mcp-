@@ -1,0 +1,29 @@
+{
+  "name": "kashier-mcp",
+  "version": "0.1.0",
+  "description": "Unofficial MCP server for the Kashier payment gateway (Egypt)",
+  "type": "module",
+  "bin": {
+    "kashier-mcp": "dist/index.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx --env-file=.env src/index.ts",
+    "test": "vitest run",
+    "inspect": "npx @modelcontextprotocol/inspector node --env-file=.env dist/index.js"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.1",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.5",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2",
+    "vitest": "^5.0.5"
+  }
+}
